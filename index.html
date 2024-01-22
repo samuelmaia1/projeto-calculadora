@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/images.png" type="image/x-icon">
+
+    <div class="container_numero">
+        <input type="number" name="" class="txt" id="num1">
+        <input type="number" name="" class="txt" id="num2">
+        <div id="res"></div>
+    </div>
+
+    <div class="container_texto">
+        <span>Número 1</span>
+        <span>Número 2</span>
+    </div>
+
+    <div class="container_botao">
+        <input type="button" value="+" class="botao" id="soma">
+        <input type="button" value="-" class="botao" id="sub">
+        <input type="button" value="x" class="botao" id="mult">
+        <input type="button" value="/" class="botao" id="divisao">
+    </div>
+
+    
+</head>
+<body>
+    <script>
+        var botao_soma = document.querySelector('input#soma')
+        botao_soma.addEventListener('click',somar)
+        function somar(){
+            var num1 = document.querySelector('input#num1')
+            var num2 = document.querySelector('input#num2')
+            var res = document.querySelector('div#res')
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+            var soma = n1+n2
+            res.innerHTML = ` = ${soma}`
+        }
+
+        var botao_sub = document.querySelector('input#sub')
+        botao_sub.addEventListener('click',subtrair)
+        function subtrair(){
+            var num1 = document.querySelector('input#num1')
+            var num2 = document.querySelector('input#num2')
+            var res = document.querySelector('div#res')
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+            var subtracao = n1-n2
+            res.innerHTML = ` = ${subtracao}`
+        }
+
+        var botao_mult = document.querySelector('input#mult')
+        botao_mult.addEventListener('click',multiplicar)
+        function multiplicar(){
+            var num1 = document.querySelector('input#num1')
+            var num2 = document.querySelector('input#num2')
+            var res = document.querySelector('div#res')
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+            var multiplicacao = n1*n2
+            res.innerHTML = ` = ${multiplicacao}`
+        }
+
+        var botao_divisao = document.querySelector('input#divisao')
+        botao_divisao.addEventListener('click',dividir)
+        function dividir(){
+            var num1 = document.querySelector('input#num1')
+            var num2 = document.querySelector('input#num2')
+            var res = document.querySelector('div#res')
+            var n1 = Number(num1.value)
+            var n2 = Number(num2.value)
+            var divisao = n1/n2
+            res.innerHTML = ` = ${divisao}`
+        }
+
+    </script>
+</body>
+</html>
