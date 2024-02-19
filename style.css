@@ -24,12 +24,15 @@
     color: white;
 }
 
-.txt{
+.caixa{
+    background-color: white;
     width: 80%;
     height: 4vh;
     border: 1px solid black;
     border-radius: 5px;
     margin-top: 15px;
+    text-align: right;
+    color: black;
 }
 
 .botoes{
@@ -72,5 +75,6 @@
     height: 80px;
 }
 
-
-
+.botoes__numeros__individual:hover, .botoes__operadores__individual:hover{
+    background-color: #202124;
+}
